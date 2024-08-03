@@ -22,12 +22,15 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      
       - name: Configure Git User Details
         run: git config --global user.email "actions@github.com" && git config --global user.name "Github Actions"
+      
       - name: Apply Patches
         run: ./gradlew applyPatches
       - name: Build
         run: ./gradlew createReobfBundlerJar
+      
       - name: Compress the TAR files
         run: tar -czf documents.tar.gz /build/libs
       - name: Upload artifact
@@ -36,3 +39,5 @@ jobs:
           name: folia-server-tar
           path: documents.tar.gz
           retention-days: 1  # 将保留天数设置为 1 天 最多可设置90天
+      - name: Clean up intermediate files
+        run: rm *-tar.tar  
