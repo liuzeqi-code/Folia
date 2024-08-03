@@ -4,6 +4,8 @@
     <p>Fork of <a href="https://github.com/PaperMC/Paper">Paper</a> which adds regionised multithreading to the dedicated server.</p>
 </div>
 
+[![Patch and Build](https://github.com/liuzeqi-code/Folia/actions/workflows/build.yml/badge.svg)](https://github.com/liuzeqi-code/Folia/actions/workflows/build.yml)
+
 ## Overview
 
 Folia groups nearby loaded chunks to form an "independent region."
