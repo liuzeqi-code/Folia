@@ -32,7 +32,7 @@ jobs:
         run: ./gradlew createReobfBundlerJar
       
       - name: Compress the TAR files
-        run: tar -czvf folia.tar.gz ./build/lib/
+        run: tar -czf folia.tar.gz *
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
