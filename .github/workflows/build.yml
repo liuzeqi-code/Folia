@@ -28,3 +28,6 @@ jobs:
         run: ./gradlew applyPatches
       - name: Build
         run: ./gradlew createReobfBundlerJar
+      - name: copy file        
+        run: cp –r -v build/libs/ .
+      
