@@ -29,5 +29,7 @@ jobs:
       - name: Build
         run: ./gradlew createReobfBundlerJar
       - name: copy file        
-        run: ls -l
+        run: cd build
+      - name: copy file        
+        run: ls -l 
       
